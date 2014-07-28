@@ -1,0 +1,60 @@
+/*
+Syntax error: File to import not found or unreadable: susyone.
+              Load paths:
+                /Users/wayne.haworth/Dropbox/projects/ClassFlow/_/components/sass
+                /Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/blueprint/stylesheets
+                /Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets
+                /Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/susy/sass
+                /Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/susy/sass
+                Compass::SpriteImporter
+        on line 3 of /Users/wayne.haworth/Dropbox/projects/ClassFlow/_/components/sass/styles.scss
+
+1: /Users/wayne.haworth/Dropbox/projects/ClassFlow/_/components/sass/styles.scss
+
+Backtrace:
+/Users/wayne.haworth/Dropbox/projects/ClassFlow/_/components/sass/styles.scss:3
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/import_node.rb:45:in `import'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:217:in `visit_import'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/root_node.rb:20:in `render'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/engine.rb:315:in `_render'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/engine.rb:262:in `render'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/compiler.rb:140:in `block (2 levels) in compile'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/compiler.rb:126:in `timed'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/compiler.rb:139:in `block in compile'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/logger.rb:45:in `red'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/compiler.rb:138:in `compile'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/compiler.rb:118:in `compile_if_required'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/compiler.rb:103:in `block (2 levels) in run'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/compiler.rb:101:in `each'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/compiler.rb:101:in `block in run'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/compiler.rb:126:in `timed'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/compiler.rb:100:in `run'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/commands/update_project.rb:45:in `perform'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/commands/base.rb:18:in `execute'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/commands/project_base.rb:19:in `execute'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/compass/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/compass:44:in `block in <main>'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/compass:58:in `call'
+/Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/compass/bin/compass:58:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: File to import not found or unreadable: susyone.\A               Load paths:\A                 /Users/wayne.haworth/Dropbox/projects/ClassFlow/_/components/sass\A                 /Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/blueprint/stylesheets\A                 /Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets\A                 /Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/susy/sass\A                 /Users/wayne.haworth/Applications/CodeKit.app/Contents/Resources/engines/susy/sass\A                 Compass::SpriteImporter\A         on line 3 of /Users/wayne.haworth/Dropbox/projects/ClassFlow/_/components/sass/styles.scss\A \A 1: /Users/wayne.haworth/Dropbox/projects/ClassFlow/_/components/sass/styles.scss"; }

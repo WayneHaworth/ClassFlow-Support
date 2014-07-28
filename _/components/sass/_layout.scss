@@ -1,0 +1,1093 @@
+//Susy setup---------------------------
+$total-columns: 12;
+$column-width: 3em;
+$gutter-width: 1em;
+$grid-padding: $gutter-width;
+$container-width: 64em;
+
+@include border-box-sizing;
+
+$small: 20em;
+$medium: 40em;
+$large: 55em;
+
+header {
+    @include at-breakpoint($large) {
+        height: 138px;
+    }
+}
+
+.layout {
+    @include container;
+    position: relative;
+    padding: 0 0%;
+    height: auto;
+    .logo-small {
+        @include at-breakpoint($large) {
+            display: none;
+        }
+    }
+    .logo-large {
+        @include at-breakpoint($small) {
+            display: none;
+        }
+
+        @include at-breakpoint($large) {
+            display: block;
+            width: auto;
+        }
+    }
+    .logo {
+        @include span-columns(11, 12);
+        padding: 0 1%;
+        @include at-breakpoint($large) {
+            margin-top: 33px;
+            margin-left: 3%;
+            position: relative;
+        }
+    }
+    .menu {
+        //@include span-columns(1 omega, 12);
+        //margin-top:18px;
+        @include at-breakpoint($small) {
+            color: white;
+            font-size: 1.3rem;
+        }
+
+        @include at-breakpoint($medium) {
+            display: none;
+        }
+    }
+    .buttons {}
+    .search-field {
+        padding: 4% 4%;
+    }
+    .search {
+        @include at-breakpoint($medium) {
+            display: none;
+        }
+    }
+    .search-btn {
+        @include span-columns(9, 12);
+        margin: 0 1%;
+        width: 70%;
+    }
+    .submit-btn {
+        @include span-columns(3 omega, 12);
+        margin-right: 1%;
+    }
+    .med-search-btn {
+        @include span-columns(9, 12);
+        margin: 0 1%;
+        width: 43%;
+        @include border-box-sizing;
+        margin-left: 25%;
+        font-size: 16px;
+        font-weight: 100;
+        margin-right: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .med-submit-btn {
+        @include span-columns(3 omega, 12);
+        margin-right: 25%;
+        background-color: $bright-green;
+        color: #fff;
+        width: 7%;
+        margin-left: 0;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        &:hover {
+            background: #fff;
+            @include single-transition(all, 0.2s, ease-out);
+        }
+        i {
+            &:hover {
+                background: $bright-green;
+                @include single-transition(all, 0.2s, ease-out);
+            }
+        }
+    }
+    .nav {
+        background: $navy-blue;
+        @include at-breakpoint($medium) {
+            height: 90px;
+        }
+
+        ul {
+            @include at-breakpoint($medium) {
+                padding: 0 !important;
+            }
+        }
+        li {
+            @include at-breakpoint($medium) {
+                @include span-columns(5, 12);
+                //margin: 0 auto;
+                padding-left: 0 !important;
+            }
+
+            @include at-breakpoint($small) {
+                //padding-left: 40px;
+                margin-left: 1%;
+            }
+        }
+    }
+}
+
+.hero-bk {
+    width: 100%;
+    @include at-breakpoint($small) {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 166px;
+        background-image: url("../../images/Hero-image.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        margin: 0 auto;
+    }
+
+    @include at-breakpoint($medium) {
+        @include span-columns(12, 12);
+        background: url("../../images/Hero-image.png") no-repeat;
+        background-position: center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        //margin: 0 auto;
+        width: 100%;
+        //max-width: 960px;
+        height: 266px;
+        position: relative;
+        display: block;
+    }
+}
+
+.section-header {
+    clear: both;
+}
+
+.navigation {
+    @include at-breakpoint($small) {
+        //background: $navy-blue;
+        ul {
+            padding: 0;
+        }
+        .layout .nav li {
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+            padding: 10px 0;
+        }
+        .layout .nav li a {
+            color: #fff;
+            padding: 3% 0;
+            i {
+                width: 10%;
+            }
+        }
+    }
+}
+
+.nav-item a {
+    color: #fff !important;
+}
+
+.medium-nav {
+    display: none;
+    letter-spacing: normal;
+    li {
+        height: 170px;
+    }
+    @include at-breakpoint($small) {
+        .menu-text {
+            font-size: 16px;
+            top: 10px;
+            position: relative;
+            color: #fff;
+        }
+    }
+
+    @include at-breakpoint($medium) {
+        display: block;
+        li a i {
+            color: $navy-blue;
+            text-align: center;
+            position: relative;
+            margin: 0 auto;
+            left: -0.35em;
+            font-size: 5em;
+            &:hover {
+                color: lighten($navy-blue, 8);
+                @include single-transition(all, 0.2s, ease-out);
+            }
+        }
+        li a {
+            font-size: 14px;
+            top: 2em;
+            position: relative;
+            letter-spacing: normal;
+        }
+        .menu-description {
+            display: none;
+        }
+    }
+
+    @include at-breakpoint($large) {
+        li {
+            height: 251px;
+        }
+        .menu-description {
+            display: block;
+            line-height: 120%;
+            font-size: 14px;
+            font-family: $font-primary;
+            color: $navy-blue;
+            margin-top: 40px;
+            padding: 2%;
+            letter-spacing: normal;
+        }
+    }
+
+    li {
+        @include at-breakpoint($medium) {
+            display: block;
+            background: $pale-blue;
+            @include border-box-sizing;
+            top: -65px;
+            @include border-radius(8px);
+            position: relative;
+            text-align: center;
+            line-height: 2em;
+            font-size: 1.1em;
+            text-transform: none;
+        }
+    }
+    .one {
+        @include border-box-sizing;
+        @include span-columns(3, 12);
+        @include border-radius(0px 8px 8px 0px);
+        i {
+            text-align: center;
+            position: relative;
+            left: 1%;
+        }
+    }
+    .two {
+        @include span-columns(3, 12);
+        i {
+            text-align: center;
+            position: relative;
+            left: 1%;
+        }
+    }
+    .three {
+        i {
+            text-align: center;
+            left: .2%;
+            position: relative;
+        }
+        @include span-columns(3, 12);
+    }
+    .four {
+        i {
+            text-align: center;
+            left: 2%;
+            position: relative;
+        }
+        @include span-columns(3 omega, 12);
+        @include border-radius(8px 0px 0px 8px);
+    }
+}
+
+.royalSlider {
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 0;
+    background: $navy-blue;
+    display: block;
+    clear: both;
+    @include at-breakpoint($small) {
+        margin-top: 20px;
+    }
+
+    @include at-breakpoint($medium) {
+        margin-top: -40px;
+    }
+}
+
+.slider-container, .rsSlide, .rsOverflow {
+    background: $navy-blue !important;
+}
+
+.reDefault, .rsBullets {
+    padding: 5px;
+    background: $navy-blue !important;
+}
+
+.layout .slider-container {
+    margin: 0 !important;
+    height: 150px;
+}
+
+.news>.layout {
+    padding: 0 1%;
+}
+
+.latest-videos {
+    @include at-breakpoint($medium) {
+        top: 20px;
+    }
+
+    @include at-breakpoint($large) {
+        //top: 40px;
+    }
+
+    h2 {
+        word-break: break-all;
+        white-space: normal;
+    }
+}
+
+.medium-search {
+    position: relative;
+    top: -155px;
+    @include at-breakpoint($small) {
+        display: none;
+    }
+
+    @include at-breakpoint($medium) {
+        display: block;
+    }
+}
+
+.move-up {
+    //top:-40px;
+}
+
+.latest-videos {
+    padding: 0 1%;
+    position: relative;
+    h1 {
+        margin-bottom: 10px;
+    }
+    span {
+        font-size: .6em;
+        color: $light-blue;
+    }
+    @include at-breakpoint($small) {
+        .video {
+            margin-bottom: 5%;
+            font-size: .9em;
+            //img { width:30%;}
+            //width: 50%;
+
+        }
+    }
+}
+
+.events {
+    margin-bottom: 50px;
+    h1 {
+        padding-bottom: 20px;
+    }
+    padding: 4% 2%;
+    @include clearfix;
+    h1 {
+        @include clearfix;
+    }
+    @include at-breakpoint($large) {
+        position: relative;
+    }
+
+    @include at-breakpoint($small) {
+        padding: 0 4%;
+    }
+
+    @include at-breakpoint($medium) {
+        padding: 0 2%;
+        p {
+            font-size: .9em;
+        }
+    }
+
+    .event {
+        @include clearfix;
+        background: $pale-blue;
+        margin-bottom: 2%;
+        time {
+            margin-bottom: 10px;
+        }
+        @include border-radius(8px);
+        .headline {
+            @include clearfix;
+            //margin-bottom: 5%;
+
+        }
+        img {
+            padding: 6% 0 3% 6%;
+            width: 150px;
+            float: left;
+        }
+        h1 {
+            padding: 6%;
+        }
+        p {
+            padding: 0 6%;
+        }
+        time {
+            font-size: .7em;
+        }
+        @include at-breakpoint($small) {
+            time {
+                position: relative;
+                //top:20%;
+
+            }
+            //margin:4% 0;
+        }
+    }
+}
+
+@include at-breakpoint($medium) {
+    .event1 {
+        @include span-columns(6, 12);
+    }
+    .event2 {
+        @include span-columns(6 omega, 12);
+    }
+    .event3 {
+        position: relative;
+        @include span-columns(6, 12);
+    }
+    .event4 {
+        position: relative;
+        @include span-columns(6 omega, 12);
+    }
+}
+
+
+h1.section-header {
+    @include at-breakpoint($medium) {
+        font-size: 1.5em;
+    }
+}
+
+@include at-breakpoint($small) {
+    .video {
+        text-align: center;
+        img {
+            width: 70%;
+            position: relative;
+            min-width: 200px;
+            max-width: 350px;
+            margin: 0 auto;
+        }
+    }
+    .video-1 {
+        @include span-columns(12, 12);
+    }
+    .video-2 {
+        @include span-columns(12, 12);
+    }
+    .video-3 {
+        @include span-columns(12, 12);
+    }
+    .video-4 {
+        @include span-columns(12, 12);
+    }
+}
+
+
+@include at-breakpoint($medium) {
+    .video {
+        text-align: center;
+        img {}
+    }
+    .video-1 {
+        @include span-columns(6, 12);
+    }
+    .video-2 {
+        @include span-columns(6 omega, 12);
+    }
+    .video-3 {
+        @include span-columns(6, 12);
+    }
+    .video-4 {
+        @include span-columns(6 omega, 12);
+    }
+}
+
+
+@include at-breakpoint($large) {
+    .video-1 {
+        @include span-columns(3, 12);
+    }
+    .video-2 {
+        @include span-columns(3, 12);
+    }
+    .video-3 {
+        @include span-columns(3, 12);
+    }
+    .video-4 {
+        @include span-columns(3 omega, 12);
+    }
+}
+
+
+footer {
+    color: #fff;
+    background: $cf-black;
+    height: 130px;
+    font-weight: lighter;
+    font-size: 14px;
+    padding: 1%;
+    .footer-list {
+        @include horizontal-list;
+    }
+    .footer-list li a {
+        color: #fff;
+    }
+    p {
+        font-size: 12px;
+        line-height: 1.5;
+        margin-top: 10px;
+    }
+}
+
+//Slider - lots of custom CSS as different slides will have different formating and click actions etc
+.featured-conversations {
+    ul {
+        @include centre;
+        width: 100%;
+        padding: 2%;
+        text-align: center;
+    }
+    //remove them all and bring them in as screen space allows
+    .conversation {
+        display: none;
+        //padding: 0 4%;
+
+    }
+    @include at-breakpoint($small) {
+        .conversation-1 {
+            text-align: center;
+            @include span-columns(12, 12);
+            display: block;
+            position: relative;
+        }
+    }
+
+    @include at-breakpoint($medium) {
+        .conversation-1 {
+            @include span-columns(6, 12);
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .conversation-2 {
+            display: block;
+            @include span-columns(6 omega, 12);
+            position: relative;
+        }
+    }
+
+    @include at-breakpoint($large) {
+        .conversation-1 {
+            @include span-columns(6, 12);
+            position: relative;
+        }
+        .conversation-2 {
+            display: block;
+            @include span-columns(6 omega, 12);
+            position: relative;
+        }
+        .conversation-3 {
+            display: block;
+            @include span-columns(6, 12);
+            position: relative;
+        }
+        .conversation-4 {
+            display: block;
+            @include span-columns(6 omega, 12);
+            position: relative;
+        }
+    }
+}
+
+.meet-champions {
+    .champions {
+        //@include centre;
+        //@include centre-champion;
+        @include horizontal-list;
+        margin-top: 30px;
+    }
+    @include at-breakpoint($small) {
+        .champion {
+            width: 50%;
+            text-align: center;
+        }
+        .champion-1 {
+            //@include span-columns(6,12);
+
+        }
+        .champion-2 {
+            //@include span-columns(6 omega,12);
+
+        }
+        .champion-3 {
+            display: none !important;
+        }
+        .champion-4 {
+            display: none !important;
+        }
+    }
+
+    @include at-breakpoint($medium) {
+        .champion {
+            width: 33%;
+            text-align: center;
+        }
+        .champion-1 {
+            //@include span-columns(6,12);
+
+        }
+        .champion-2 {
+            //@include span-columns(6 omega,12);
+
+        }
+        .champion-3 {
+            display: block !important;
+        }
+    }
+
+    @include at-breakpoint($large) {
+        .champion {
+            width: 25%;
+            text-align: center;
+        }
+        .champion-1 {
+            //@include span-columns(6,12);
+
+        }
+        .champion-2 {
+            //@include span-columns(6 omega,12);
+
+        }
+        .champion-3 {
+            display: block;
+        }
+        .champion-4 {
+            display: block !important;
+        }
+    }
+}
+
+.community-ideas {
+    .ideas {}
+    .idea {
+        margin: 0 auto;
+        position: relative;
+        text-align: center;
+        margin-top: 20px;
+    }
+    @include at-breakpoint($small) {
+        .idea-title-icon {
+            h1 {
+                color: #fff;
+            }
+        }
+        .idea-1 {}
+        .idea-2, .idea-3, .idea-4 {
+            display: none;
+        }
+    }
+
+    @include at-breakpoint($medium) {
+        .idea {
+            float: left;
+        }
+        .idea-title-icon {
+            h1 {
+                color: #fff;
+            }
+        }
+        .idea-1 {
+            //font-size: .9em;
+            width: 50%;
+        }
+        .idea-2 {
+            //font-size: .9em;
+            width: 50%;
+            display: block;
+        }
+    }
+
+    @include at-breakpoint($large) {
+        //.hidden-ideas {display:none;}
+        .ideas {
+            padding: 0 2%;
+            @include centre-champion(y);
+        }
+        .idea {
+            float: left;
+            //font-size: .9em;
+            margin-top: 0;
+            //i {float: left;}
+            margin: 6px 0;
+        }
+        .idea-title-icon {
+            h1 {
+                color: #fff;
+            }
+        }
+        .idea-1 {
+            //font-size: .9em;
+            width: 50%;
+        }
+        .idea-2 {
+            //font-size: .9em;
+            width: 50%;
+            display: block;
+        }
+        .idea-3, .idea-4 {
+            display: block;
+        }
+    }
+}
+
+.hidden-ideas {
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    .idea {
+        float: left;
+    }
+    .idea-3, .idea-4 {
+        width: 50%;
+        padding: 0 2%;
+    }
+    background: $navy-blue;
+    //height: 150px;
+}
+
+.layout {}
+
+.resource-intro {
+    padding: 2% 4%;
+    .introduction {
+        @include span-columns(8, 12);
+    }
+    .sidebar {
+        @include span-columns(4 omega, 12);
+        @include prefix(1);
+    }
+}
+
+.featured-video {
+    padding: 10% 4%;
+    article {
+        h2 {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        p {
+            font-size: .9em;
+            padding: 1% 0;
+        }
+        ul {
+            @include horizontal-list;
+        }
+        li {
+            font-size: .8em;
+            padding: 1% 0;
+        }
+        @include at-breakpoint($small) {
+            .article-content {
+                margin-top: 10px;
+            }
+        }
+
+        @include at-breakpoint($medium) {
+            img {
+                @include span-columns(4, 12);
+            }
+            .article-content {
+                margin-top: 0px;
+                @include span-columns(8 omega, 12);
+            }
+        }
+    }
+}
+
+.latest-videos {
+    padding: 8% 4%;
+    .vid {
+        font-size: 0.8em;
+        background: $pale-blue;
+        @include border-radius(8px);
+        white-space: normal;
+        text-align: center;
+        line-height: 1.5;
+        color: $navy-blue;
+        img {
+            padding-top: 8%;
+            padding-bottom: 4%;
+        }
+        h1 {
+            text-align: center;
+        }
+    }
+    ul {
+        @include horizontal-list;
+    }
+    @include at-breakpoint($small) {
+        .vid {
+            margin: 2% 0;
+            img {
+                width: 80%;
+                //max-width: 320px;
+
+            }
+        }
+        .vid-1 {
+            @include span-columns(12, 12);
+        }
+        .vid-2 {
+            @include span-columns(12, 12);
+        }
+        .vid-3 {
+            @include span-columns(12, 12);
+        }
+        .vid-4 {
+            @include span-columns(12, 12);
+        }
+    }
+
+    @include at-breakpoint($medium) {
+        .vid {
+            margin: 1% 0;
+        }
+        .vid-1 {
+            @include span-columns(6, 12);
+        }
+        .vid-2 {
+            @include span-columns(6 omega, 12);
+        }
+        .vid-3 {
+            @include span-columns(6, 12);
+        }
+        .vid-4 {
+            @include span-columns(6 omega, 12);
+        }
+    }
+
+    @include at-breakpoint($large) {
+        .vid-1 {
+            @include span-columns(3, 12);
+        }
+        .vid-2 {
+            @include span-columns(3, 12);
+        }
+        .vid-3 {
+            @include span-columns(3, 12);
+        }
+        .vid-4 {
+            @include span-columns(3 omega, 12);
+        }
+    }
+}
+
+.community-answers {
+    h1 {
+        padding: 0 4%;
+    }
+    p {
+        padding: 2% 4% 2% 4%;
+    }
+    .answers-list {
+        background: $navy-blue;
+        color: #ffffff;
+        font-size: .8em;
+        padding: 2% 4%;
+        i {
+            padding-right: 4%;
+        }
+        a {
+            top: -8px;
+            position: relative;
+        }
+        ul {
+            @include clearfix;
+            li {
+                padding: 1%;
+            }
+        }
+        @include at-breakpoint($small) {
+            .answer {
+                text-align: center;
+                font-size: 1.2em;
+                padding: 4% 0;
+            }
+        }
+
+        @include at-breakpoint($medium) {
+            .answer {
+                font-size: 1.2em;
+                padding: 2% 0;
+            }
+            //text-align:left;
+            .answer-1 {
+                @include span-columns(6, 12);
+                //@include prefix(1);
+
+            }
+            .answer-2 {
+                @include span-columns(6 omega, 12);
+                //	@include prefix(1);
+
+            }
+            .answer-3 {
+                @include span-columns(6, 12);
+                //	@include prefix(1);
+
+            }
+            .answer-4 {
+                @include span-columns(6 omega, 12);
+                //@include prefix(1);
+
+            }
+            .answer-5 {
+                @include span-columns(6, 12);
+                //	@include prefix(1);
+
+            }
+            .answer-6 {
+                @include span-columns(6 omega, 12);
+                //	@include prefix(1);
+
+            }
+            .answer-7 {
+                @include span-columns(6, 12);
+                //	@include prefix(1);
+
+            }
+            .answer-8 {
+                @include span-columns(6 omega, 12);
+                //	@include prefix(1);
+
+            }
+            .answer-9 {
+                display: none;
+            }
+        }
+
+        /*@include at-breakpoint($large) {
+        	.answer-1 {
+        		@include span-columns(4, 12);
+        		@include prefix(1);
+        	}
+        	.answer-2 {
+        		@include span-columns(4, 12);
+        		@include prefix(1);
+        	}
+        	.answer-3 {
+        		@include span-columns(4 omega, 12);
+        		@include prefix(1);
+        	}
+        	.answer-4 {
+        		@include span-columns(4, 12);
+        		@include prefix(1);
+        	}
+        	.answer-5 {
+        		@include span-columns(4, 12);
+        		@include prefix(1);
+        	}
+        	.answer-6 {
+        		@include span-columns(4 omega, 12);
+        		@include prefix(1);
+        	}
+        	.answer-7 {
+        		@include span-columns(4, 12);
+        		@include prefix(1);
+        	}
+        	.answer-8 {
+        		@include span-columns(4, 12);
+        		@include prefix(1);
+        	}
+        	.answer-9 {
+        		display: block;
+        		@include span-columns(4 omega, 12);
+        		@include prefix(1);
+        	}
+        }*/
+    }
+}
+
+.blog {
+    padding: 2% 4%;
+    article {
+        @include at-breakpoint($small) {
+            @include span-columns(12, 12);
+        }
+
+        @include at-breakpoint($large) {
+            @include span-columns(9, 12);
+        }
+
+        .article-detials {
+            @include horizontal-list;
+        }
+        .article-body {
+            p, ul {
+                padding: 2% 0;
+            }
+            ul li {
+                padding: 1% 0;
+            }
+            ul {
+                list-style: circle;
+                list-style-position: inside;
+            }
+            a.discuss {
+                font-size: .8em;
+            }
+            img {
+                padding: 2% 0;
+                width: 90%;
+            }
+            margin-bottom: 40px;
+        }
+    }
+    aside {
+        @include at-breakpoint($small) {
+            li {
+                line-height: 1.2;
+                padding-bottom: 10px;
+                a {
+                    font-size: .9em;
+                }
+            }
+        }
+
+        @include at-breakpoint($medium) {
+            li a {
+                font-size: 1em;
+            }
+        }
+
+        @include at-breakpoint($large) {
+            @include span-columns(3 omega, 12);
+        }
+
+        .most-popular-articles {
+            margin-top: 20px;
+        }
+    }
+}
