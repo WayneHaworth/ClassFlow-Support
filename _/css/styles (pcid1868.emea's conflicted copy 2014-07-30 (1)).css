@@ -281,30 +281,11 @@ input::-webkit-input-placeholder {
   padding: 0 1% !important;
 }
 
-/* line 159, ../components/sass/_base.scss */
-.champion p {
-  display: none;
+/* line 157, ../components/sass/_base.scss */
+.champion-1-hover {
+  position: absolute;
   width: 200px;
-  color: #fff;
-  white-space: normal;
-  text-align: center;
-  line-height: 1.4;
-  font-size: 0.8em;
-  margin: 0 auto;
-  margin-top: 10px;
-}
-/* line 169, ../components/sass/_base.scss */
-.champion p span {
-  font-weight: bold;
-}
-/* line 173, ../components/sass/_base.scss */
-.champion a {
-  color: #11b5fc;
-}
-
-/* line 178, ../components/sass/_base.scss */
-.visible {
-  display: block !important;
+  color: red;
 }
 
 /* line 14, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/susy/sass/susy/_grid.scss */

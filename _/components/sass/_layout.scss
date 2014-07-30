@@ -630,6 +630,7 @@ footer {
     }
     @include at-breakpoint($small) {
         .champion {
+        	position: relative;
             width: 50%;
             text-align: center;
         }

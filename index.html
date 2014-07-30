@@ -100,18 +100,23 @@
 						<li class="champion champion-1">
 							<img src="images/gill.png">
 							<h1>Gill</h1>
+							<p class="about-author"><span>About the Author</span>: Paula Prince is a First Grade teacher at Berea Elementary School, Greenville, and holds a Masters Degree in Technology Integration K-12 from Nova Southeastern University in 2006. Find out more about Paula from her school <a href="#">blog</a> page.</p>
+
 						</li>
 						<li class="champion champion-2">
 							<img src="images/christian.png">
 							<h1>Christian</h1>
+							<p class="about-author"><span>About the Author</span>: Paula Prince is a First Grade teacher at Berea Elementary School, Greenville, and holds a Masters Degree in Technology Integration K-12 from Nova Southeastern University in 2006. Find out more about Paula from her school <a href="#">blog</a> page.</p>
 						</li>
 						<li class="champion champion-3">
 							<img src="images/Gresham.png">
 							<h1>Gresham</h1>
+							<p class="about-author"><span>About the Author</span>: Paula Prince is a First Grade teacher at Berea Elementary School, Greenville, and holds a Masters Degree in Technology Integration K-12 from Nova Southeastern University in 2006. Find out more about Paula from her school <a href="#">blog</a> page.</p>
 						</li>
 						<li class="champion champion-4">
 							<img src="images/Matt.png">
 							<h1>Matt</h1>
+							<p class="about-author"><span>About the Author</span>: Paula Prince is a First Grade teacher at Berea Elementary School, Greenville, and holds a Masters Degree in Technology Integration K-12 from Nova Southeastern University in 2006. Find out more about Paula from her school <a href="#">blog</a> page.</p>
 						</li>
 					</ul>
 				</div>
@@ -249,21 +254,36 @@
 				<script src="_/js/script-ck.js"></script>
 				<script>
 				jQuery(document).ready(function($) {
-				$(".royalSlider").royalSlider({
-				controlsInside: true,
-				loop: true,
-				arrowsNavHideOnTouch: false,
-				arrowsNavAutoHide: true,
-				controlNavigation: 'none',
-				transitionSpeed: 1000,
-				sliderDrag: false,
-				autoPlay: {
-				enabled: true,
-				delay: 7000,
-				pauseOnHover: true
-				}
+					$(".royalSlider").royalSlider({
+						controlsInside: true,
+						loop: true,
+						navigateByClick: false,
+						arrowsNavHideOnTouch: false,
+						arrowsNavAutoHide: true,
+						controlNavigation: 'none',
+						transitionSpeed: 1000,
+						sliderDrag: false,
+						autoPlay: {
+							enabled: true,
+							delay: 7000,
+							pauseOnHover: true
+						}
+					});
 				});
-				});
+
+				 $('.champion').hover
+				 (
+				 	function() {
+    				$('.rsOverflow').css('height', '350px');
+    				//$('this').next('p').css('display', 'block');
+    				//$(this).css('display', 'none');
+    				//$(this).find('p').css('display', 'block');
+    				$('.champion').find('p').css('display', 'block');
+  				},
+  				function() {
+  					$('.rsOverflow').css('height', '200px');
+  				  $('.champion').find('p').css('display', 'none');
+  			});
 				</script>
 			</body>
 		</html>

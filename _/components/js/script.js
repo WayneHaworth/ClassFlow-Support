@@ -5,6 +5,10 @@ $(document).ready(function() {
   //TODO setup content loading for mobile menu/search
   //Mobile search is not passing string through properly
 
+  $('h1').on("click", function() {
+    window.console.log("clicked");
+  });
+
   function sendQuery() {
 
     var search_query = $('#search-input').val();
@@ -64,6 +68,14 @@ $(document).ready(function() {
     //$('.nav').hide();
     $('.search-field').slideToggle(100);
   });
+
+
+  $('li').hover(
+    function() {
+      window.console.log("hovered");
+    }
+  );
+
 
   /*
 
